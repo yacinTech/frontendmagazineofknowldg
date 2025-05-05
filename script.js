@@ -20,6 +20,9 @@ let allArticles = [];
 function displayArticles(articles) {
   articlesContainer.innerHTML = '';
   articles.forEach(article => {
+    if (article.category === "نبذة" || article.category === 'سياسة الاستخدام') {
+      return; // تخطي هذا المقال
+    }
     const card = document.createElement('div');
     card.className = 'article-card';
     card.innerHTML = `
