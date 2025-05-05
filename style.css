@@ -1,0 +1,211 @@
+/* الخط العربي الجميل */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Amiri', serif;
+  background: #fdfdfd;
+  direction: rtl;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #004d66;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+}
+
+#articles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.article-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+.article-title {
+  font-size: 1.4rem;
+  color: #004d66;
+}
+
+.article-category {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.article-snippet {
+  margin-top: 0.5rem;
+  color: #333;
+}
+
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #004d66;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+.logo img {
+    width: 40px; /* عرض الصورة */
+    height: 40px; /* ارتفاع الصورة */
+    border-radius: 50%; /* يجعل الصورة دائرية */
+    object-fit: cover; /* يساعد على تأكد من أن الصورة تمتلئ المساحة دون تشويه */
+    margin-top: 9px;
+  }
+
+
+
+  .social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .social-icons a {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #27ae60; /* لون مميز عند التمرير */
+  }
+  
+  /* تنسيق عنوان الموقع */
+.site-title {
+    text-decoration: none;      /* إزالة الخط السفلي */
+    color: #4A90E2;             /* لون العنوان */
+    font-size: 2.5rem;          /* حجم خط أكبر لعنوان الموقع */
+    font-weight: bold;          /* خط عريض */
+    font-family: 'Amiri', serif; /* نوع خط أنيق */
+    transition: color 0.3s ease; /* تأثير اللون عند التمرير */
+    margin-right: 20px;         /* المسافة بين العنوان والعناصر الأخرى */
+  }
+  
+  /* تأثير عند التمرير فوق العنوان */
+  .site-title:hover {
+    color: #27ae60;             /* لون أخضر عند التمرير */
+  }
+  
+  /* تنسيق قائمة الروابط */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* المسافة بين العناصر */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .nav-links li a:hover {
+    background-color: #27ae60;  /* خلفية خضراء ناعمة عند التمرير */
+    color: white;
+  }
+  
+  /* القائمة المنسدلة في الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #004d66;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      padding: 1rem;
+      border-radius: 5px;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
+  .article-content {
+    white-space: pre-line;
+    line-height: 2;
+    color: #333;
+    font-size: 1.5rem; 
+  }
+  

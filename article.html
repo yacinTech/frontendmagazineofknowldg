@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>عرض المقال</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="unnamed.jpg" alt="لوغو المجلة" /></a>
+      <a href="index.html"></a><span>مجلة المعرفة</span></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="#">نبذة</a></li>
+        <li><a href="#">تواصل معنا</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main id="article-content" style="padding: 1rem;"></main>
+
+  <footer>
+    <p>© 2025 مجلة المعرفة. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    const article = JSON.parse(localStorage.getItem('selectedArticle'));
+    const container = document.getElementById('article-content');
+    if (article) {
+      container.innerHTML = `
+        <h1 class="article-title">${article.title}</h1>
+        <p class="article-category">${article.category}</p>
+        
+        <div class="article-content">${article.content}</div>
+      `;
+    }
+
+    document.querySelector('.menu-toggle').onclick = () => {
+      document.querySelector('.nav-links').classList.toggle('show');
+    };
+  </script>
+</body>
+</html>
