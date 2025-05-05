@@ -20,12 +20,7 @@ let allArticles = [];
 function displayArticles(articles) {
   articlesContainer.innerHTML = '';
   articles.forEach(article => {
-     if (
-      isHomePage &&
-      (article.category === 'نبدة' || article.category === 'سياسة الخصوصية')
-    ) {
-      return;
-    }
+   
 
     const card = document.createElement('div');
     card.className = 'article-card';
