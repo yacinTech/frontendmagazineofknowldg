@@ -209,4 +209,17 @@ footer {
     color: #333;
     font-size: 1.5rem; 
   }
-  
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+
+  .logo i {
+    color: #f39c12;
+    margin-right: 10px;
+  }
