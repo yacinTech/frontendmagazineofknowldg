@@ -235,7 +235,7 @@ footer {
 
   .article-header-image {
     width: 100%;
-    max-height: 400px;
+    height: 200px;
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 1rem;
