@@ -47,14 +47,17 @@
     const article = JSON.parse(localStorage.getItem('selectedArticle'));
     const container = document.getElementById('article-content');
     if (article) {
-      container.innerHTML = `
-        <h1 class="article-title">${article.title}</h1>
-        <p class="article-category">${article.category}</p>
-        
-        <div class="article-content">${article.content}</div>
-      `;
-    }
+    const imageHTML = article.image
+      ? `<img src="${article.image}" alt="${article.title}" class="article-header-image">`
+      : '';
 
+    container.innerHTML = `
+      ${imageHTML}
+      <h1 class="article-title">${article.title}</h1>
+      <p class="article-category">${article.category}</p>
+      <div class="article-content">${article.content}</div>
+    `;
+  }
     document.querySelector('.menu-toggle').onclick = () => {
       document.querySelector('.nav-links').classList.toggle('show');
     };
