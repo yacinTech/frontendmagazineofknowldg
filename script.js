@@ -25,6 +25,7 @@ function displayArticles(articles) {
     const card = document.createElement('div');
     card.className = 'article-card';
     card.innerHTML = `
+      ${article.image ? `<img src="${article.image}" alt="${article.title}" class="article-image">` : ''}
       <h2 class="article-title">${article.title}</h2>
       <p class="article-category">${article.category}</p>
       <p class="article-snippet">${article.content.slice(0, 100)}...</p>
