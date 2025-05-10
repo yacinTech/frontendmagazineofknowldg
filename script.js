@@ -1,9 +1,4 @@
-async function get() {
-    const info = await fetch("https://web-production-b51f.up.railway.app/api/articles");
-    const data = await info.json()
-    console.log(data)
-}
-get()
+
 
 
 
@@ -12,7 +7,7 @@ const navLinks = document.querySelector('.nav-links');
 const menuToggle = document.querySelector('.menu-toggle');
 const navItems = document.querySelectorAll('.nav-links li a');
 // رابط الـ API الخاص بك
-const API_URL = 'https://web-production-b51f.up.railway.app/api/articles'; // ← غيّر هذا بالرابط الحقيقي
+const API_URL = 'https://fitness-magazine-backend-myportfolio.up.railway.app/api/articles'; // ← غيّر هذا بالرابط الحقيقي
 
 let allArticles = [];
 
